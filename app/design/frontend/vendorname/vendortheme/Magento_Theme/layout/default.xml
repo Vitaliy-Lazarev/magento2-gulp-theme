@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="navigation.sections" destination="header-wrapper" after="logo" />
+        <move element="page.main.title" destination="columns" before="-" />
+        <move element="minicart" destination="case-link-minicart" after="header.links"/>
+        <move element="logo" destination="header.panel" before="case-link-minicart"/>
+
+        <!--<referenceBlock name="top.links" remove="true" />-->
+        <!--<referenceBlock name="navigation.sections" remove="true"/>-->
+        <referenceBlock name="sidebar.additional" remove="true"/>
+
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">217</argument>
+                <argument name="logo_img_height" xsi:type="number">47</argument>
+            </arguments>
+        </referenceBlock>
+
+        <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        <referenceBlock name="currency" remove="true"/>
+        <referenceBlock name="store.settings.currency" remove="true"/>
+        <referenceBlock name="top.links" remove="true"/>
+
+        <referenceContainer name="header.panel">
+            <container name="case-link-minicart" as="case-link-minicart" label="Container For Header link minicart" htmlTag="div" htmlClass="case-account-minicart" />
+                <!--<block class="Magento\Framework\View\Element\Html\Links" name="header-account">-->
+                    <!--<arguments>-->
+                        <!--<argument name="css_class" xsi:type="string">header-account</argument>-->
+                    <!--</arguments>-->
+                    <!--<block class="Magento\Framework\View\Element\Html\Link\Current" name="header-account-create">-->
+                        <!--<arguments>-->
+                            <!--<argument name="label" xsi:type="string">Signup</argument>-->
+                            <!--<argument name="path" xsi:type="string">customer/account/create/</argument>-->
+                        <!--</arguments>-->
+                    <!--</block>-->
+                    <!--<block class="Magento\Framework\View\Element\Html\Link\Current" name="header-account-login">-->
+                        <!--<arguments>-->
+                            <!--<argument name="label" xsi:type="string">Login</argument>-->
+                            <!--<argument name="path" xsi:type="string">customer/account/login/</argument>-->
+                        <!--</arguments>-->
+                    <!--</block>-->
+                <!--</block>-->
+            <!--</container>-->
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+
+            <container name="case-network-footer" label="Footer Wrapper Network" htmlTag="div" htmlClass="case-network-footer">
+                <block class="Magento\Framework\View\Element\Template" name="logo-footer" template="Magento_Theme::html/network-footer.phtml" />
+            </container>
+
+            <container name="case-wrapper-footer" label="Footer Wrapper Company" htmlTag="div" htmlClass="case-wrapper-footer">
+                <container name="link-wrapper-1" label="Footer Link Wrapper Company" htmlTag="div" htmlClass="footer-nav-col">
+                    <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_company">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">footer-nav company</argument>
+                        </arguments>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="summer-living-direct">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Summer Living Direct</argument>
+                                <argument name="path" xsi:type="string">summer-living-direct</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="contact-us">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Contact Us</argument>
+                                <argument name="path" xsi:type="string">contact-us</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="faq">
+                            <arguments>
+                                <argument name="label" xsi:type="string">FAQ / Help</argument>
+                                <argument name="path" xsi:type="string">faq</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="return">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Return &amp; Warranty</argument>
+                                <argument name="path" xsi:type="string">return</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="sales">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Sales / Specials</argument>
+                                <argument name="path" xsi:type="string">sales</argument>
+                            </arguments>
+                        </block>
+                    </block>
+                </container>
+                <container name="link-wrapper-2" label="Footer Link Wrapper Account" htmlTag="div" htmlClass="footer-nav-col">
+                    <block class="Magento\Framework\View\Element\Html\Links" name="footer_links_account">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">footer-nav account</argument>
+                        </arguments>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="shipping-information">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Shipping Information</argument>
+                                <argument name="path" xsi:type="string">shipping-information</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="cushion-features">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Cushion Features</argument>
+                                <argument name="path" xsi:type="string">cushion-features</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="custom-cushions">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Custom Cushions</argument>
+                                <argument name="path" xsi:type="string">custom-cushions</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="fabric-facts">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Fabric Facts</argument>
+                                <argument name="path" xsi:type="string">fabric-facts</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="how-Measure">
+                            <arguments>
+                                <argument name="label" xsi:type="string">How To Measure</argument>
+                                <argument name="path" xsi:type="string">how-Measure</argument>
+                            </arguments>
+                        </block>
+                        <block class="Magento\Framework\View\Element\Html\Link\Current" name="template-nformation">
+                            <arguments>
+                                <argument name="label" xsi:type="string">Template Information</argument>
+                                <argument name="path" xsi:type="string">template-nformation</argument>
+                            </arguments>
+                        </block>
+                    </block>
+                </container>
+            </container>
+
+            <!--<container name="link-wrapper-5" label="Footer Link Wrapper Delivery" htmlTag="div" htmlClass="footer-nav-col">-->
+                <!--<block class="Magento\Framework\View\Element\Template" name="logo-footer" template="Magento_Theme::html/logo-footer.phtml" />-->
+            <!--</container>-->
+        </referenceContainer>
+        <referenceBlock name="form.subscribe" remove="true"/>
+        <referenceBlock name="report.bugs" remove="true" />
+        <referenceBlock name="related.product.addto.compare" remove="true"/>
+        <referenceBlock name="crosssell.product.addto.compare" remove="true"/>
+        <referenceBlock name="upsell.product.addto.compare" remove="true"/>
+        <referenceBlock name="view.addto.compare" remove="true" />
+        <referenceBlock name="catalog.compare.link" remove="true"/>
+
+
+        <container name="case-link-copy" as="case-link-copy" label="Container For copyright" htmlTag="div" htmlClass="case-link-copy" />
+        <move element="top.search" destination="case-link-minicart" before="minicart" />
+        <move element="case-link-copy" destination="before.body.end" after="-" />
+        <move element="copyright" destination="case-link-copy" before="-" />
+        <move element="footer_links" destination="case-link-copy" after="-" />
+    </body>
+</page>

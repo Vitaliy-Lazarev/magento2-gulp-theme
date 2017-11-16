@@ -1,0 +1,36 @@
+.case-account-minicart{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -17px;
+    .block-search{
+        float: left;
+        .action.advanced{
+            display: none;
+        }
+        #search{
+            border: none;
+            &::-webkit-input-placeholder { /* WebKit browsers */
+                color: transparent;
+            }
+            &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                color: transparent;
+            }
+            &::-moz-placeholder { /* Mozilla Firefox 19+ */
+                color: transparent;
+            }
+            &:-ms-input-placeholder { /* Internet Explorer 10+ */
+
+            }
+        }
+        .action.search{
+            padding: 0;
+            &:before{
+                color: #000;
+                font-size: 35px;
+                line-height: 35px;
+            }
+        }
+    }
+
+}

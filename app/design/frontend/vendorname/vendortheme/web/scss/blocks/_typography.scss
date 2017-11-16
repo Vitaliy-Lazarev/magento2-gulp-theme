@@ -1,0 +1,118 @@
+@include lib-font-face(
+    $family-name: $font-family-name__base,
+    $font-path: '../fonts/opensans/light/opensans-300',
+    $font-weight: 300,
+    $font-style: normal
+);
+
+@include lib-font-face(
+    $family-name: $font-family-name__base,
+    $font-path: '../fonts/opensans/regular/opensans-400',
+    $font-weight: 400,
+    $font-style: normal
+);
+
+@include lib-font-face(
+    $family-name: $font-family-name__base,
+    $font-path: '../fonts/opensans/semibold/opensans-600',
+    $font-weight: 600,
+    $font-style: normal
+);
+
+@include lib-font-face(
+    $family-name: $font-family-name__base,
+    $font-path: '../fonts/opensans/bold/opensans-700',
+    $font-weight: 700,
+    $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-Thin',
+        $font-weight: 100,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-ExtraLight',
+        $font-weight: 200,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-Light',
+        $font-weight: 300,
+        $font-style: normal
+);
+
+@include lib-font-face(
+    $family-name: $work-Sans__font-name,
+    $font-path: '../fonts/Work-Sans/WorkSans-Regular',
+    $font-weight: 400,
+    $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-Medium',
+        $font-weight: 500,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-SemiBold',
+        $font-weight: 600,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-Bold',
+        $font-weight: 700,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-ExtraBold',
+        $font-weight: 800,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $work-Sans__font-name,
+        $font-path: '../fonts/Work-Sans/WorkSans-Black',
+        $font-weight: 900,
+        $font-style: normal
+);
+
+@include lib-font-face(
+        $family-name: $font-awesome__font-name,
+        $font-path: $font-awesome__font-path,
+        $font-weight: normal,
+        $font-style: normal
+);
+
+
+//
+//  Desktop
+//  _____________________________________________
+
+@include min-screen($screen__m) {
+    h1 {
+        @include lib-css(font-size, $h1__font-size-desktop);
+        @include lib-css(margin-bottom, $h1__margin-bottom__desktop);
+    }
+}
+
+.items {
+    @include lib-list-reset-styles();
+}
+
+body{
+  font-family: $work-Sans__font-name;
+  font-weight: 400;
+}
